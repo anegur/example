@@ -1,0 +1,134 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    z-index: 100; /* Высокий z-index для поверхностного отображения */
+}
+
+.sitename {
+    margin-top: 0;
+}
+
+.head_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+}
+
+.head_nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+/* Стили для ссылок */
+.head_nav ul li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.head_nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.15s ease;
+}
+
+.head_nav ul li a:hover {
+    color: #68b9c4;
+}
+
+#clock {
+    color: #f47676;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(38, 38, 39, 0.719);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.05);
+    min-width: 200px;
+    z-index: 50;
+    border-radius: 7px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+main {
+    margin-top: 60px;
+    padding: 20px;
+    min-height: 850px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* --- Стили для мобильных устройств --- */
+
+/* Добавим медиазапросы для экранов до 768px */
+@media (max-width: 768px) {
+    .head_nav ul {
+        display: none; /* Прячем навигационное меню */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 10px 0;
+        z-index: 99;
+    }
+
+    /* Стили для кнопки гамбургера */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: #fff;
+        margin-right: 20px;
+    }
+
+    /* Показать меню, если включено */
+    .head_nav.active ul {
+        display: flex;
+    }
+
+    /* Стилизуем элементы выпадающего меню */
+    .dropdown-content {
+        min-width: 100%;
+        position: relative;
+        box-shadow: none;
+    }
+
+    .head_nav ul li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .sitename {
+        font-size: 18px; /* Уменьшаем размер шрифта для меньших экранов */
+    }
+}

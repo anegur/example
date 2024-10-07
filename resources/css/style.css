@@ -1,0 +1,126 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    /* font-family: Montserrat; */
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display:initial;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+}
+
+.sitename {
+    margin-top: 0px;
+    /* margin-left: 10%; */
+}
+
+.head_nav {
+    display: inline;
+    margin-bottom: 0px;
+    /* margin-left: 10%;
+    margin-top: 0px; */
+}
+
+/* этот блок для строкового списка в целом */
+.head_nav ul {
+    list-style-type: none;
+    margin-left: 5%;
+    margin: 0;
+    margin-left: 10%
+    /* смещение ссылок*/
+    /* float: left; */
+}
+
+/* этот блок отвечает за отступы в отделении каждой ссылки (текста) */
+.head_nav ul li {
+    display: inline-block;
+    /* margin-right: 5px; */
+    margin-bottom: 15px;
+    margin-top: 15px;
+    /* width: 150px; */
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* оформление текста каждой ссылки */
+.head_nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.15s ease;
+}
+
+.head_nav ul li a:hover {
+    color: #68b9c4;
+}
+
+.head_nav ul li a [href="index.html"] {
+    width: 150px;
+}
+
+#clock {
+    /* float: left; */
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 30px;
+    color: #f47676;
+}
+
+main {
+    margin-top: 60px;
+    min-height: 850px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    margin-left: 0px;
+    position:absolute;
+    background-color: rgba(38, 38, 39, 0.719);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.05);
+    min-width: 200px;
+    z-index: 50;
+    border-radius: 7px;
+    padding-left: 0px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+}
+
+/* отступы блоков ссылок в выпадающей панели */
+.head_nav ul li ul li {
+    margin: 5px;
+}
+
+/* стиль текста ссылок выпадающей панели */
+.head_nav ul li ul li a {
+    font-family: Montserrat;
+    font-weight: normal;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

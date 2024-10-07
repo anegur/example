@@ -1,0 +1,127 @@
+/* Заголовки */
+h1, h2 {
+    text-align: center; /* Выравнивание текста заголовков по центру */
+}
+
+/* Основной контент */
+.main_content {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.5;
+    text-indent: 20px;
+    text-align: left;
+}
+
+.error {
+    color: red;
+    border: 1px solid red;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #ffe6e6;
+}
+.success {
+    color: green;
+    border: 1px solid green;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #e6ffe6;
+}
+.info-block {
+    color: gray;
+    font-style: italic;
+}
+
+/* Устанавливаем фиксированную ширину для столбца с отзывом */
+table.reviews td:nth-child(3) {
+    max-width: 300px; /* Задаем максимальную ширину для столбца Отзыв */
+    word-wrap: break-word; /* Переносим слова на новую строку, если они слишком длинные */
+    word-break: break-word; /* Переносим длинные слова на следующую строку */
+    white-space: normal; /* Разрешаем перенос строк */
+}
+
+/* Стили для формы */
+
+
+form input {
+    width: 200px;
+}
+
+form input, form textarea, form button {
+    margin-left: 20%;
+    
+}
+
+form textarea {
+    max-width: 60%;
+    min-width: 25%;
+    max-height: 400px;
+    min-height: 100px;
+}
+
+/* Стили для отображения ошибок валидации */
+.error-message {
+    color: red; /* Цвет текста для ошибок (красный) */
+    font-size: 14px; /* Размер шрифта для текста ошибок */
+    margin-top: 5px; /* Отступ сверху для текстов ошибок */
+}
+
+/* Стили для таблицы отзывов */
+table.reviews {
+    width: 100%; /* Ширина таблицы занимает 100% от родительского элемента */
+    border-collapse: collapse; /* Убираем двойные границы между ячейками таблицы */
+    margin-top: 20px; /* Отступ сверху для таблицы отзывов */
+}
+
+table.reviews th, table.reviews td {
+    padding: 10px; /* Внутренний отступ для ячеек таблицы */
+    text-align: left; /* Выравнивание текста в ячейках по левому краю */
+    border: 1px solid #ddd; /* Цвет и стиль рамки для ячеек таблицы */
+}
+
+table.reviews th {
+    background-color: #f8f9fa; /* Цвет фона для заголовков таблицы */
+    font-weight: bold; /* Жирное начертание для текста заголовков */
+}
+
+table.reviews tr:nth-child(even) {
+    background-color: #f2f2f2; /* Цвет фона для четных строк таблицы (серый) */
+}
+
+table.reviews tr:hover {
+    background-color: #f1f1f1; /* Цвет фона строки таблицы при наведении (светло-серый) */
+}
+
+/* Стили для информационного блока */
+.info-block {
+    margin-top: 20px; /* Отступ сверху для информационного блока */
+    padding: 20px; /* Внутренний отступ для блока */
+    background-color: #f9f9f9; /* Цвет фона для информационного блока (светло-серый) */
+    border: 1px solid #ddd; /* Цвет и стиль рамки для блока */
+    border-radius: 5px; /* Закругленные углы для информационного блока */
+}
+
+.info-block p {
+    margin: 0; /* Убираем внешние отступы для параграфа */
+    font-size: 16px; /* Размер шрифта для текста в блоке */
+    color: #555; /* Цвет текста в блоке (темно-серый) */
+}
+
+/* Адаптивность для небольших экранов */
+@media (max-width: 600px) {
+    .main_content {
+        width: 90%; /* Увеличиваем ширину для мобильных устройств (90% от родителя) */
+    }
+
+    form input, form textarea {
+        font-size: 14px; /* Уменьшаем размер шрифта для полей ввода и текстовой области на мобильных устройствах */
+    }
+
+    form button {
+        font-size: 14px; /* Уменьшаем размер шрифта для кнопки на мобильных устройствах */
+    }
+
+    table.reviews th, table.reviews td {
+        font-size: 14px; /* Уменьшаем размер шрифта для текста в таблице на мобильных устройствах */
+    }
+}

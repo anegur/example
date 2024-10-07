@@ -1,0 +1,14 @@
+.avatar {
+    text-align: center; 
+}
+
+.avatar img { 
+    max-width: 200px; 
+    height: auto;
+    display: block; 
+    margin: 0 auto; 
+}
+
+.main_content {
+    text-align: center;
+}

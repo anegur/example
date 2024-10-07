@@ -1,0 +1,141 @@
+.main_content {
+    text-align: center;
+}
+
+.error {
+    color: red;
+    border: 1px solid red;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #ffe6e6;
+}
+.success {
+    color: green;
+    border: 1px solid green;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #e6ffe6;
+}
+.info-block {
+    color: gray;
+    font-style: italic;
+}
+
+/* Заголовки */
+h1, h2 {
+    text-align: center; /* Выравнивание текста заголовков по центру */
+    margin-bottom: 20px;
+}
+
+/* Основной контент */
+.main_content {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    line-height: 1.5;
+    text-align: left;
+}
+
+/* Стили для формы */
+form input, form textarea {
+    width: calc(100% - 40px); /* Ширина равна 100% за вычетом отступов */
+    margin: 10px 20px; /* Отступы сверху и по бокам */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form textarea {
+    min-height: 100px;
+}
+
+form button {
+    display: block;
+    width: calc(100% - 40px); /* Ширина кнопки */
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #4CAF50; /* Зеленый цвет фона */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Стили для отображения сообщений */
+.error, .success {
+    width: calc(100% - 40px);
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.error {
+    color: red;
+    border: 1px solid red;
+    background-color: #ffe6e6;
+}
+
+.success {
+    color: green;
+    border: 1px solid green;
+    background-color: #e6ffe6;
+}
+
+/* Стили для таблицы отзывов */
+table.reviews {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table.reviews th, table.reviews td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table.reviews th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+table.reviews tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Стили для информационного блока */
+.info-block {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    .main_content {
+        width: 90%;
+    }
+
+    form input, form textarea, form button {
+        width: calc(100% - 20px);
+        margin: 10px;
+    }
+
+    table.reviews th, table.reviews td {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,24 @@
+h1 {
+    text-align: center;
+}
+
+.navigation_head {
+    /*text-align: center;*/
+    color: #333;
+}
+
+.navigation {
+    list-style-type: none;
+    color: #fff;
+    text-align: center;
+}
+
+
+.main_content {
+    width: 40%;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.5;
+    text-indent: 20px;
+    text-align: left;
+}
