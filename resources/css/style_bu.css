@@ -1,0 +1,80 @@
+.page-content {
+    padding: 20px;
+    background-color: #f4f4f4; /* Цвет фона страницы */
+    border-radius: 8px; /* Скругление углов */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для всей страницы */
+}
+
+h1 {
+    font-size: 2em; /* Размер заголовка */
+    margin-bottom: 20px; /* Отступ снизу */
+    text-align: center; /* Выравнивание заголовка по центру */
+}
+
+h2.divider {
+    font-size: 1.5em; /* Размер подзаголовка */
+    margin-bottom: 15px; /* Отступ снизу */
+    text-align: center; /* Выравнивание подзаголовка по центру */
+}
+
+.container {
+    max-width: 600px; /* Максимальная ширина контейнера */
+    margin: 0 auto; /* Центрирование контейнера */
+    padding: 20px; /* Внутренние отступы */
+    background-color: #ffffff; /* Фон контейнера */
+    border-radius: 8px; /* Скругление углов */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для контейнера */
+}
+
+.form {
+    display: flex; /* Используем Flexbox для выравнивания */
+    flex-direction: column; /* Вертикальное выравнивание */
+}
+
+.form-block {
+    margin-bottom: 15px; /* Отступ снизу для каждого блока */
+}
+
+.form-block-label {
+    font-weight: bold; /* Жирный шрифт для метки */
+    margin-bottom: 5px; /* Отступ снизу для метки */
+    display: block; /* Блоковый элемент для метки */
+}
+
+input[type="file"] {
+    padding: 10px; /* Внутренние отступы для поля выбора файла */
+    border: 1px solid #ccc; /* Рамка вокруг поля */
+    border-radius: 4px; /* Скругление углов */
+    width: 100%; /* Ширина поля 100% */
+    cursor: pointer; /* Указатель для курсора */
+}
+
+input[type="submit"] {
+    background-color: #28a745; /* Зеленый фон для кнопки */
+    color: #fff; /* Белый текст */
+    padding: 10px 15px; /* Внутренние отступы для кнопки */
+    border: none; /* Без рамки */
+    border-radius: 4px; /* Скругление углов */
+    cursor: pointer; /* Указатель для курсора */
+    transition: background-color 0.3s; /* Плавный переход фона */
+}
+
+input[type="submit"]:hover {
+    background-color: #218838; /* Более темный зеленый фон при наведении */
+}
+
+.green-block, .red-block {
+    margin-top: 15px; /* Отступ сверху для уведомлений */
+    padding: 10px; /* Внутренние отступы */
+    border-radius: 4px; /* Скругление углов */
+}
+
+.green-block {
+    background-color: #d4edda; /* Светло-зеленый фон для успешных сообщений */
+    color: #155724; /* Темно-зеленый текст */
+}
+
+.red-block {
+    background-color: #f8d7da; /* Светло-красный фон для ошибок */
+    color: #721c24; /* Темно-красный текст */
+}

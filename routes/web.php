@@ -8,6 +8,9 @@ use App\Http\Controllers\InterestsController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Admin\GBUploaderController;
+use App\Http\Controllers\Admin\BlogEditorController;
+use App\Http\Controllers\MyBlogController;
+use App\Http\Controllers\BlogUploaderController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -48,8 +51,16 @@ Route::post('/contact', [ContactController::class, 'ValidateForm'])->name('conta
 Route::get('/guest_book', [GuestBookController::class, 'index'])->name('guest_book');
 Route::post('/guest_book/store', [GuestBookController::class, 'store'])->name('guest_book.store');
 
+Route::get('/my_blog', [MyBlogController::class, 'index'])->name('my_blog');
+
+Route::get('/blog_uploader', [BlogUploaderController::class, 'index'])->name('blog_uploader');
+Route::post('/blog_uploader/upload', [BlogUploaderController::class, 'upload'])->name('blog_uploader.upload');
+
 Route::get('/admin/gb_uploader', [GBUploaderController::class, 'index'])->name('gb_uploader');
 Route::post('/admin/gb_uploader/upload', [GBUploaderController::class, 'upload'])->name('gb_uploader.upload');
+
+Route::get('/admin/blog_editor', [BlogEditorController::class, 'index'])->name('blog_editor');
+Route::post('/admin/blog_editor/store', [BlogEditorController::class, 'store'])->name('blog_editor.store');
 
 Route::get('/history', function () {
     return view('history');

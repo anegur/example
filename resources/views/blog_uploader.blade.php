@@ -7,7 +7,7 @@
         <title>Персональная страничка</title>
 
         @vite(['resources/css/style.css', 
-        'resources/css/style_index.css', 
+        'resources/css/style_bu.css', 
         'resources/js/date_viewer.js'])
 
     </head>
@@ -44,27 +44,37 @@
         </nav>
     </header>
         <main>
-            <div class = "avatar">
-                <img src="images/avatar.jpg" alt="Моя аватарка">
-            </div>
-            <div class = "main_content">
-                <h1>Ларин Андрей Максимович</h1>
-                <h2>Студент группы ПИ/б-21-1-о</h2>
-                <p>Некоторое описание....
-                </p>
-                <div id="clock"></div>
+            <div class="page-content">
+                <h1>Загрузка сообщений Блога</h1>
+                <div class="container">
+                <h2 class="divider">Форма загрузки</h2>
+                <form class="form" method="post" action="/blog_uploader/upload" enctype="multipart/form-data">
+                    @csrf
+                    <div class="form-block">
+                    <label for="message" class="form-block-label">Записи блога  (.csv)</label>
+                    <input type="file" name="file">
+                    </div>
+
+                    <input type="submit" value="Загрузить записи" id="submit">
+
+                </form>
+
+                @isset($is_file)
+                        @if($is_file==true)
+                        <div class="green-block">
+                        <p>Файл успешно загружен</p>
+                        </div>
+                        @else
+                        <div class="red-block">
+                        <p>Ошибка при загрузке файла!</p>
+                        </div>
+                        @endif
+                    @endisset
+                </div>
             </div>
         </main>
         <footer>
             <p>&copy; 2024 Моя Персональная Страница</p>
         </footer>
-        
-
-        <!-- <script src="JScode/nav_page_loader.js"></script> -->
-        <!-- <script src="JScode/drop_menu.js"></script> -->
-        <!-- <script>
-            updateHistory();
-        </script> -->
-        <form action="index/validate" method="post"></form>
     </body>
 </html>
