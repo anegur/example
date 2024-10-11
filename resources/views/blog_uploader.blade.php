@@ -36,7 +36,7 @@
                 <li><a href="{{ route('contact') }}">Контакт</a></li>
                 <li><a href="{{ route('test') }}">Тест по дисциплине</a></li>
                 <li><a href="{{ route('guest_book') }}">Гостевая книга</a></li>
-                <li><a href="{{ route('blog_editor') }}">Редактор блога</a></li>
+                <!-- <li><a href="{{ route('blog_editor') }}">Редактор блога</a></li> -->
                 <li><a href="{{ route('my_blog') }}">Блог</a></li>
                 <li><a href="{{ route('blog_uploader') }}">Загрузка блога</a></li>
                 <li id="clock"></li>

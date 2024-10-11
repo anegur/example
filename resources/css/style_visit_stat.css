@@ -1,0 +1,73 @@
+/* Стили для всей страницы */
+.page-content {
+    font-family: Arial, sans-serif; /* Шрифт для страницы */
+    padding: 20px; /* Отступы вокруг содержимого */
+    background-color: #f9f9f9; /* Фоновый цвет */
+}
+
+/* Заголовки */
+h1 {
+    text-align: center; /* Выравнивание по центру */
+    color: #333; /* Цвет заголовка */
+}
+
+h2.divider {
+    margin-top: 30px; /* Отступ сверху */
+    margin-bottom: 20px; /* Отступ снизу */
+    border-bottom: 2px solid #007bff; /* Подчеркивание */
+    padding-bottom: 10px; /* Отступ снизу */
+}
+
+/* Стили для контейнера с таблицей */
+.container {
+    max-width: 800px; /* Максимальная ширина контейнера */
+    margin: 0 auto; /* Центрирование контейнера */
+}
+
+/* Стили для таблицы */
+.labtable {
+    width: 100%; /* Ширина таблицы 100% */
+    border-collapse: collapse; /* Убираем двойные границы */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+.labtable th, .labtable td {
+    padding: 12px; /* Отступы внутри ячеек */
+    text-align: left; /* Выравнивание текста */
+    border-bottom: 1px solid #ddd; /* Нижняя граница для ячеек */
+}
+
+.labtable th {
+    background-color: #007bff; /* Цвет фона заголовков */
+    color: white; /* Цвет текста заголовков */
+}
+
+.labtable tr:hover {
+    background-color: #f1f1f1; /* Цвет фона при наведении на строку */
+}
+
+/* Стили для пагинации */
+.pagination {
+    display: flex; /* Гибкое выравнивание */
+    justify-content: center; /* Центрирование элементов */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+.pagination a {
+    color: #007bff; /* Цвет ссылок пагинации */
+    padding: 10px 15px; /* Отступы вокруг ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+    border: 1px solid #007bff; /* Граница */
+    border-radius: 5px; /* Скругление углов */
+    margin: 0 5px; /* Отступы между элементами */
+}
+
+.pagination a:hover {
+    background-color: #007bff; /* Цвет фона при наведении */
+    color: white; /* Цвет текста при наведении */
+}
+
+.pagination .active {
+    background-color: #007bff; /* Цвет фона для активной страницы */
+    color: white; /* Цвет текста для активной страницы */
+}

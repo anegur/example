@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Персональная страничка</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        @vite(['resources/css/style.css', 
-        'resources/css/style_index.css', 
-        'resources/js/date_viewer.js'])
+    <title>Персональная страничка</title>
 
-    </head>
+    @vite([
+    'resources/css/style.css',
+    'resources/css/style_index.css',
+    'resources/js/date_viewer.js'
+])
 
-    <body>
-        
+</head>
+
+<body>
+
     <header>
         <nav class="head_nav">
             <ul>
                 <li class="sitename">
-                    <span>С</span><span>а</span><span>й</span><span>т</span> <span>м</span><span>о</span><span>е</span><span>й</span> <span>п</span><span>е</span><span>р</span><span>с</span><span>о</span><span>н</span><span>ы</span>
+                    <span>С</span><span>а</span><span>й</span><span>т</span>
+                    <span>м</span><span>о</span><span>е</span><span>й</span>
+                    <span>п</span><span>е</span><span>р</span><span>с</span><span>о</span><span>н</span><span>ы</span>
                 </li>
                 <li><a href="{{ route('index') }}">Главная</a></li>
                 <li><a href="{{ route('about') }}">Обо мне</a></li>
@@ -39,32 +44,45 @@
                 <li><a href="{{ route('blog_editor') }}">Редактор блога</a></li>
                 <li><a href="{{ route('my_blog') }}">Блог</a></li>
                 <li><a href="{{ route('blog_uploader') }}">Загрузка блога</a></li>
+                <li><a href="{{ route('visit_stat') }}">Статистика посещений</a></li>
+                @if($user)
+                    <li><a href="/logout" class="leave-btn">Выйти</a></li>
+                @else
+                    <!-- <li><a href="/admin/login">Вход в админ панель</a></li> -->
+                    <li><a href="{{ route('login') }}">Вход/Регистрация</a></li>
+                @endif
                 <li id="clock"></li>
             </ul>
+            @if($user)
+                <div class="profile-data">
+                    <p class="user-name">{{ $user->fullname }}</p>
+                </div>
+            @endif
         </nav>
     </header>
-        <main>
-            <div class = "avatar">
-                <img src="images/avatar.jpg" alt="Моя аватарка">
-            </div>
-            <div class = "main_content">
-                <h1>Ларин Андрей Максимович</h1>
-                <h2>Студент группы ПИ/б-21-1-о</h2>
-                <p>Некоторое описание....
-                </p>
-                <div id="clock"></div>
-            </div>
-        </main>
-        <footer>
-            <p>&copy; 2024 Моя Персональная Страница</p>
-        </footer>
-        
+    <main>
+        <div class="avatar">
+            <img src="images/avatar.jpg" alt="Моя аватарка">
+        </div>
+        <div class="main_content">
+            <h1>Ларин Андрей Максимович</h1>
+            <h2>Студент группы ПИ/б-21-1-о</h2>
+            <p>Некоторое описание....
+            </p>
+            <div id="clock"></div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Моя Персональная Страница</p>
+    </footer>
 
-        <!-- <script src="JScode/nav_page_loader.js"></script> -->
-        <!-- <script src="JScode/drop_menu.js"></script> -->
-        <!-- <script>
+
+    <!-- <script src="JScode/nav_page_loader.js"></script> -->
+    <!-- <script src="JScode/drop_menu.js"></script> -->
+    <!-- <script>
             updateHistory();
         </script> -->
-        <form action="index/validate" method="post"></form>
-    </body>
+    <form action="index/validate" method="post"></form>
+</body>
+
 </html>

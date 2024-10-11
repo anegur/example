@@ -1,0 +1,83 @@
+/* Общие стили для страницы */
+.page-content {
+    padding: 20px;
+    background-color: #f4f4f4; /* Светлый фон */
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333; /* Темный цвет текста */
+    margin-bottom: 20px;
+}
+
+h2.divider {
+    text-align: center;
+    font-size: 1.8em;
+    color: #007bff; /* Цвет заголовка */
+    margin-bottom: 30px;
+}
+
+/* Стили для контейнера */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Стили для опций */
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Расположение опций */
+}
+
+/* Стили для каждой опции */
+.opt {
+    background-color: #ffffff; /* Белый фон для опций */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень */
+    padding: 20px;
+    margin: 15px;
+    width: calc(24% - 30px); /* Ширина с учетом отступов */
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    color: #333; /* Цвет текста */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавный переход */
+}
+
+.opt:hover {
+    transform: translateY(-5px); /* Подъем при наведении */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Более выраженная тень */
+}
+
+/* Стили для заголовков опций */
+.opt h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px; /* Отступ снизу */
+}
+
+/* Стили для описания опции */
+.opt p {
+    font-size: 1em;
+    color: #555; /* Более светлый цвет для текста описания */
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .opt {
+        width: calc(48% - 30px); /* Ширина для меньших экранов */
+    }
+}
+
+@media (max-width: 480px) {
+    .opt {
+        width: 100%; /* Полная ширина для мобильных устройств */
+    }
+}
+
+.disabled {
+    pointer-events: none; /* Отключает события мыши */
+    background-color: #e0e0e0; /* Светлый фон для неактивной кнопки */
+    color: #9e9e9e; /* Цвет текста для неактивной кнопки */
+    cursor: not-allowed; /* Изменяет курсор при наведении */
+    opacity: 0.6; /* Полупрозрачность для неактивного состояния */
+}

@@ -20,25 +20,14 @@
                 <li class="sitename">
                     Сайт моей персоны
                 </li>
-                <li><a href="{{ route('index') }}">Главная</a></li>
-                <li><a href="{{ route('about') }}">Обо мне</a></li>
-                <li class="dropdown"><a href="{{ route('interests') }}" class="dropdown-toggle">Интересы</a>
-                    <ul class="dropdown-content">
-                        <li><a href="{{ route('interests') }}#hobby">Хобби</a></li>
-                        <li><a href="{{ route('interests') }}#books">Любимые книги</a></li>
-                        <li><a href="{{ route('interests') }}#games">Любимые игры</a></li>
-                        <li><a href="{{ route('interests') }}#anime">Любимые японские мультики</a></li>
-                        <li><a href="{{ route('interests') }}#weather">Любимая погода</a></li>
-                    </ul>
-                </li>
-                <!-- <li><a href="{{ route('education') }}">Учёба</a></li> -->
-                <li><a href="{{ route('photo_album') }}">Фотоальбом</a></li>
-                <li><a href="{{ route('contact') }}">Контакт</a></li>
-                <li><a href="{{ route('test') }}">Тест по дисциплине</a></li>
                 <li><a href="{{ route('guest_book') }}">Гостевая книга</a></li>
+                <li><a href="{{ route('gb_uploader') }}">Загрузка ГК</a></li>
                 <li><a href="{{ route('blog_editor') }}">Редактор блога</a></li>
                 <li><a href="{{ route('my_blog') }}">Блог</a></li>
                 <li><a href="{{ route('blog_uploader') }}">Загрузка блога</a></li>
+                <li><a href="{{ route('visit_stat') }}">Статистика посещений</a></li>
+                <!-- <li><a href="{{ route('login') }}">Вход/Регистрация</a></li> -->
+                <li><a class="leave-btn" href="/logout">Выйти</a></li>
                 <li id="clock"></li>
             </ul>
         </nav>

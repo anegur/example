@@ -24,11 +24,9 @@
                         <li><a href="{{ route('interests') }}#weather">Любимая погода</a></li>
                     </ul>
                 </li>
-                <li><a href="{{ route('education') }}">Учёба</a></li>
                 <li><a href="{{ route('photo_album') }}">Фотоальбом</a></li>
                 <li><a href="{{ route('contact') }}">Контакт</a></li>
                 <li><a href="{{ route('test') }}">Тест по дисциплине</a></li>
-                <li><a href="{{ route('history') }}">История</a></li>
                 <li id="clock"></li>
             </ul>
         </nav>
